@@ -173,6 +173,43 @@ header{
     cursor:pointer;
 }
 
+/* ===== Stats Section ===== */
+
+.stats{
+    width:90%;
+    max-width:1300px;
+    margin:80px auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.stat-box{
+    background:#11182e;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:20px;
+    padding:35px;
+    text-align:center;
+    transition:.4s;
+}
+
+.stat-box:hover{
+    transform:translateY(-10px);
+    border-color:#8b5cf6;
+    box-shadow:0 0 30px rgba(139,92,246,.35);
+}
+
+.stat-box h2{
+    color:#8b5cf6;
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.stat-box p{
+    color:#b6bdd8;
+    font-size:17px;
+}
+
 /* ===== AI Tools ===== */
 
 .tools{
@@ -261,6 +298,18 @@ margin-top:60px;
 
 .glass-card{
 width:100%;
+}
+
+.stats{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:600px){
+
+.stats{
+grid-template-columns:1fr;
 }
 
 }
