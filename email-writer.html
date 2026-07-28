@@ -76,6 +76,7 @@ Generated email will appear here...
 function generateEmail(){
 
 let subject=document.getElementById("subject").value;
+let tone=document.getElementById("tone").value;
 let details=document.getElementById("details").value;
 
 document.getElementById("result").innerHTML=
@@ -84,6 +85,9 @@ document.getElementById("result").innerHTML=
 +"I hope you are doing well.<br><br>"
 +details+
 "<br><br>Thank you.<br>Best Regards";
+  navigator.clipboard.writeText(document.getElementById("result").innerText);
+
+alert("Email Copied!");
 }
 </script>
 
