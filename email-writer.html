@@ -78,24 +78,41 @@ Generated email will appear here...
 </section>
 
 <script>
+<script>
 function generateEmail(){
 
-}
+let subject = document.getElementById("subject").value;
+let tone = document.getElementById("tone").value;
+let details = document.getElementById("details").value;
 
-let subject=document.getElementById("subject").value;
-let tone=document.getElementById("tone").value;
-let details=document.getElementById("details").value;
+document.getElementById("result").innerHTML =
+"<h3>" + subject + "</h3><br>"
++ "Dear Sir/Madam,<br><br>"
++ "I hope you are doing well.<br><br>"
++ details
++ "<br><br>Thank you.<br>Best Regards";
 
-document.getElementById("result").innerHTML=
-"<h3>"+subject+"</h3><br>"
-+"Dear Sir/Madam,<br><br>"
-+"I hope you are doing well.<br><br>"
-+details+
-"<br><br>Thank you.<br>Best Regards";
-  navigator.clipboard.writeText(document.getElementById("result").innerText);
+navigator.clipboard.writeText(document.getElementById("result").innerText);
 
 alert("Email Copied!");
 }
+
+function downloadEmail(){
+
+let text = document.getElementById("result").innerText;
+
+let blob = new Blob([text], {type:"text/plain"});
+
+let link = document.createElement("a");
+
+link.href = URL.createObjectURL(blob);
+
+link.download = "email.txt";
+
+link.click();
+
+}
+</script>
 </script>
 
 </body>
