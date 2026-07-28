@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Email Writer - AIGenie</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+<nav class="navbar">
+
+<div class="logo">🤖 AIGenie</div>
+
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="tools.html">AI Tools</a></li>
+<li><a href="pricing.html">Pricing</a></li>
+<li><a href="#">Blog</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+
+<a class="btn-nav" href="#">Get Started</a>
+
+</nav>
+</header>
+
+<section class="tools">
+
+<h2>Email Writer</h2>
+
+<div style="max-width:800px;margin:40px auto;">
+
+<input
+id="subject"
+type="text"
+placeholder="Email Subject"
+style="width:100%;padding:15px;border-radius:10px;margin-bottom:15px;">
+
+<textarea
+id="details"
+placeholder="Describe your email..."
+style="width:100%;height:180px;padding:15px;border-radius:10px;"></textarea>
+
+<button
+onclick="generateEmail()"
+style="margin-top:20px;width:100%;padding:15px;background:#8b5cf6;color:#fff;border:none;border-radius:10px;cursor:pointer;">
+Generate Email
+</button>
+
+<div
+id="result"
+style="margin-top:30px;background:#11182e;padding:20px;border-radius:10px;">
+Generated email will appear here...
+</div>
+
+</div>
+
+</section>
+
+<script>
+function generateEmail(){
+
+let subject=document.getElementById("subject").value;
+let details=document.getElementById("details").value;
+
+document.getElementById("result").innerHTML=
+"<h3>"+subject+"</h3><br>"
++"Dear Sir/Madam,<br><br>"
++"I hope you are doing well.<br><br>"
++details+
+"<br><br>Thank you.<br>Best Regards";
+}
+</script>
+
+</body>
+</html>
