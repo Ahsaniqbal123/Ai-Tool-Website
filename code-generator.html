@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Code Generator - AIGenie</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+<nav class="navbar">
+
+<div class="logo">🤖 AIGenie</div>
+
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="tools.html">AI Tools</a></li>
+<li><a href="pricing.html">Pricing</a></li>
+<li><a href="#">Blog</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+
+<a class="btn-nav" href="#">Get Started</a>
+
+</nav>
+</header>
+
+<section class="tools">
+
+<h2>Code Generator</h2>
+
+<div style="max-width:800px;margin:40px auto;">
+
+<input
+id="language"
+type="text"
+placeholder="Programming Language (HTML, Python, JavaScript...)"
+style="width:100%;padding:15px;border-radius:10px;margin-bottom:15px;">
+
+<textarea
+id="prompt"
+placeholder="Describe what code you want..."
+style="width:100%;height:180px;padding:15px;border-radius:10px;"></textarea>
+
+<button
+onclick="generateCode()"
+style="margin-top:20px;width:100%;padding:15px;background:#8b5cf6;color:white;border:none;border-radius:10px;cursor:pointer;">
+
+Generate Code
+
+</button>
+
+<pre
+id="result"
+style="margin-top:30px;background:#11182e;padding:20px;border-radius:10px;white-space:pre-wrap;color:#00ff99;">
+
+Generated code will appear here...
+
+</pre>
+
+</div>
+
+</section>
+
+<script>
+
+function generateCode(){
+
+let language=document.getElementById("language").value;
+let prompt=document.getElementById("prompt").value;
+
+document.getElementById("result").textContent=
+
+"// "+language+" Code\n\n"+
+
+"// Prompt: "+prompt+"\n\n"+
+
+"// AI generated sample\n\n"+
+
+"console.log('Hello World');";
+
+}
+
+</script>
+
+</body>
+</html>
