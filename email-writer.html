@@ -79,27 +79,6 @@ Generated email will appear here...
 
 <script>
 function generateEmail(){
-  function downloadEmail(){
-
-let text = document.getElementById("result").innerText;
-
-let blob = new Blob([text], {type:"text/plain"});
-
-let link = document.createElement("a");
-
-link.href = window.URL.createObjectURL(blob);
-
-link.download = "email.txt";
-
-document.body.appendChild(link);
-
-link.click();
-
-document.body.removeChild(link);
-
-window.URL.revokeObjectURL(link.href);
-
-}
 
 }
 
