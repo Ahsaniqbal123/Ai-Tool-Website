@@ -34,6 +34,38 @@
 <p style="text-align:center;color:#b6bdd8;">
 This AI tool will generate professional business proposals.
 </p>
+  <div style="max-width:700px;margin:40px auto;">
+
+<input
+type="text"
+id="topic"
+placeholder="Enter proposal topic..."
+style="width:100%;padding:15px;border-radius:10px;border:none;margin-bottom:20px;">
+
+<button
+onclick="generateProposal()"
+style="width:100%;padding:15px;background:#8b5cf6;color:#fff;border:none;border-radius:10px;cursor:pointer;">
+Generate Proposal
+</button>
+
+<div
+id="result"
+style="margin-top:30px;background:#11182e;padding:20px;border-radius:10px;">
+Your proposal will appear here...
+</div>
+
+</div>
+
+<script>
+function generateProposal() {
+let topic = document.getElementById("topic").value;
+
+document.getElementById("result").innerHTML =
+"<h3>Business Proposal</h3><br>" +
+"We propose a complete solution for <b>" + topic +
+"</b>. This proposal includes planning, implementation and support.";
+}
+</script>
 
 </section>
 
