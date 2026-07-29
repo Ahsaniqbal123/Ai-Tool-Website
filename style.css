@@ -65,6 +65,7 @@ nav a:hover{
     padding:12px 24px;
     border-radius:12px;
     font-weight:600;
+    transition:0.3s;
 }
 .btn-primary:hover{
     background:#ff8c1a;
