@@ -26,3 +26,10 @@ header{
     justify-content:space-between;
     align-items:center;
 }
+.logo{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:32px;
+    font-weight:700;
+    color:#ffffff;
+    text-decoration:none;
+}
