@@ -71,3 +71,12 @@ nav a:hover{
 .btn-primary:hover{
     background:#ff8c1a;
 }
+.hero{
+    min-height:90vh;
+}
+.hero-content{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:60px;
+}
