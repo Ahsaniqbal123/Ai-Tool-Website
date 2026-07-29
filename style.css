@@ -21,6 +21,7 @@ header{
     top:0;
     z-index:1000;
     border-bottom:1px solid rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
 }
 .container{
     width:90%;
@@ -64,4 +65,7 @@ nav a:hover{
     padding:12px 24px;
     border-radius:12px;
     font-weight:600;
+}
+.btn-primary:hover{
+    background:#ff8c1a;
 }
